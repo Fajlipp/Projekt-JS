@@ -7,7 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+body { 
+    text-align: center;
+background-color: rgb(202, 202, 202);
+}
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 5px solid rgb(139, 139, 139);
+    padding: 10px;
+}
+p {font-size: larger ;}
+#biga {font-size: 18px;}
+
+</style>
+
 <body>
-    
+    <title>Přičítání daně z přidané hodnoty k ceně produktu</title>
+    <script>
+		function calculate() {
+			var input = parseFloat(document.getElementById("input").value);
+			var result = input * 1.21;
+			document.getElementById("result").innerHTML = " <u>Cena včetně DPH je<u/> " + result + " kč ";
+		}
+	</script>
+</head>
+
+<br>
+
+<body>
+	<h1>Přičtení DPH</h1>
+	<br>
+    <h3>Usnadněte si přípočet daně z přidané hodnoty k ceně</h3>
+    <label for="input">Zde zadejte cenu bez DPH: </label>
+	<input type="text" id="input">
+	<button onclick="calculate()">Spočítat</button>
+	<br>
+    <p id="result"></p>
+<p id="biga"> Pro další info klikněte
+    <a href="help.html">zde</a> </p>
 </body>
 </html>
